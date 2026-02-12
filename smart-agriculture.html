@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Agriculture Monitoring System</title>
+
+    <!-- CSS INSIDE STYLE TAG -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f9f4;
+        }
+
+        header {
+            background: green;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #222;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .flow div {
+            background: lightgreen;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .card {
+            display: inline-block;
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+            background: #e6ffe6;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px gray;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌾 Smart Agriculture Monitoring System</h1>
+    <p>AI + Drone + IoT Based Crop Monitoring</p>
+</header>
+
+<nav>
+    <a href="#overview">Overview</a>
+    <a href="#problem">Problem</a>
+    <a href="#features">Features</a>
+    <a href="#dashboard">Dashboard</a>
+</nav>
+
+<section id="overview">
+    <h2>Project Overview</h2>
+    <p>
+        Autonomous drone system performing scheduled aerial monitoring 
+        with AI-powered crop analysis and yield prediction.
+    </p>
+</section>
+
+<section id="problem">
+    <h2>Problem Statement</h2>
+    <p>
+        Traditional farming lacks real-time monitoring leading to water waste,
+        pest damage, and unpredictable yields.
+    </p>
+</section>
+
+<section id="features">
+    <h2>🚀 Wow Factors</h2>
+    <ul>
+        <li>All-in-One Smart Monitoring</li>
+        <li>AI Pest Detection (CNN/YOLO)</li>
+        <li>Real-Time Dashboard</li>
+        <li>Yield Prediction</li>
+    </ul>
+</section>
+
+<section id="dashboard">
+    <h2>📊 Live Monitoring Dashboard</h2>
+
+    <div class="card">
+        <h3>Soil Moisture</h3>
+        <p id="moisture">-- %</p>
+    </div>
+
+    <div class="card">
+        <h3>Temperature</h3>
+        <p id="temperature">-- °C</p>
+    </div>
+
+    <div class="card">
+        <h3>Crop Health</h3>
+        <p id="health">--</p>
+    </div>
+
+    <br><br>
+    <button onclick="generateData()">Refresh Data</button>
+</section>
+
+<footer>
+    <p>© 2026 Team_12041 | Smart Agriculture Monitoring System</p>
+</footer>
+
+<!-- JAVASCRIPT INSIDE SCRIPT TAG -->
+<script>
+    function generateData() {
+
+        let moisture = Math.floor(Math.random() * 100);
+        let temperature = Math.floor(Math.random() * 15) + 20;
+
+        let healthStatus;
+
+        if (moisture > 60) {
+            healthStatus = "Healthy 🌱";
+        } else if (moisture > 40) {
+            healthStatus = "Moderate ⚠";
+        } else {
+            healthStatus = "Low - Irrigation Needed 🚨";
+        }
+
+        document.getElementById("moisture").innerText = moisture + " %";
+        document.getElementById("temperature").innerText = temperature + " °C";
+        document.getElementById("health").innerText = healthStatus;
+    }
+</script>
+
+</body>
+</html>
